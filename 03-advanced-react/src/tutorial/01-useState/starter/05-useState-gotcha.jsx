@@ -7,8 +7,10 @@ const UseStateGotcha = () => {
   return (
     <div>
       <h2>count is {add}</h2>;
-      <button className="btn" onClick={ () => setAdd((currentState)=> {
-        return currentState +1})}>
+      <button className="btn" onClick={ () => setTimeout(() => {
+        setAdd((currentState)=> {
+        return currentState +1})
+      }, 3000)}>
         add 1 </button>
       {console.log(add)}
     </div>
