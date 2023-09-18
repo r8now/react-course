@@ -8,7 +8,6 @@ const MultipleReturnsFetchData = () => {
   const [isError, setIsError] = useState(false);
 
   useEffect(()=>{
-
     const fetchUser = async ()=>{
       try{
         const resp = await fetch(url);
