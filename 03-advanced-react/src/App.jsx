@@ -1,4 +1,5 @@
-import {Home, About} from "./tutorial/04-project-structure/starter/Pages";
+import List from "./tutorial/05-leverage-javascript/starter/List.jsx";
+
 
 
 
@@ -8,9 +9,8 @@ function App() {
 
   return (
     <div className="container">
-   <About/>
-   <Home/>
-     
+   <List/>
+
     </div>
   );
 }

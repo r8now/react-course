@@ -5,10 +5,6 @@ export const data = [
   { id: 4, name: 'anna' },
 ];
 
-export const data2 = 
-  { id: 1, name: "john", age: 24,hobby:"football" };
- 
-
 
 
 export const people = [
