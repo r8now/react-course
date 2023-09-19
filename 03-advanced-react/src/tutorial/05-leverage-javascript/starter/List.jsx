@@ -1,28 +1,16 @@
+import { Person } from './Person';
+
 import React, { useEffect, useState } from 'react'
-
-const url = "https://api.github.com/users";
+import {people} from "../../../data"
 const List = () => {
-  const [person, setPerson] = useState([]);
-
-  useEffect(() => {
-    const fetchPerson = async () => {
-      try {
-        const data = await fetch(url);
-        const getData = await data.json();
-
-        setPerson(getData);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchPerson();
-  }, []);
+console.log(people);
 
   return (
     <div>
      
-    {person.map((person)=> {
-    return <li key={person.id}>{person.login} </li>;
+    {people.map((person)=> {
+       
+    return <Person key={person.id} {...person}  />;
     })}
    
    </div>
