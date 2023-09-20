@@ -37,7 +37,19 @@ const App = () => {
       </main>
     );
   }
-
+if(tours.length<1){
+ return (
+   <main>
+     {" "}
+     <div className="title">
+      <h2>No tours left</h2>
+       <button type="button" className="btn" onClick={() => fetchTours()}>
+         get them back
+       </button>
+     </div>
+   </main>
+ );
+}
   return (
     <main>
       <Tours tours={tours} removeTour={removeTour} />
