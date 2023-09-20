@@ -3,7 +3,7 @@ import {data} from "../../../data"
 
 const UserChallenge = () => {
   const [name, setName] = useState("");
-  const [users,setUsers] = useState([])
+  const [users,setUsers] = useState(data)
 
   const handleSubmit =(e) => {
     e.preventDefault();
@@ -17,6 +17,12 @@ const UserChallenge = () => {
     console.log("form submitted")
     setName("");
 
+  }
+  const remove= (id)=> {
+
+ let newVal = users.filter((user)=> user.id !== id )
+ console.log(newVal)
+ setUsers(newVal);
   }
 
   return (
@@ -33,11 +39,13 @@ const UserChallenge = () => {
         <button type='submit' className='btn btn-block'>
           submit
         </button>
+        <button onClick={()=>setUsers([])}>delete All</button>
       </form>
       {/* render users below */}
       <h4>users</h4>
       {users.map((user)=>{
-        return <div key={user.id}> <h4>{user.name}</h4></div>
+        const {id,name} = user;
+        return <div key={id}> <h4>{name} </h4> <button className="btn" onClick={()=>remove(id)}>remove</button></div>
       })}
     </div>
   );
