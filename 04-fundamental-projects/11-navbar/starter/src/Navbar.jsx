@@ -1,19 +1,21 @@
-import React, { useRef, useState } from 'react'
-import {FaBars} from "react-icons/fa"
-import {links,social} from "./data"
-import logo from "./logo.svg"
+import React, { useRef, useState } from "react";
+import { FaBars } from "react-icons/fa";
+import { links, social } from "./data";
+import logo from "./logo.svg";
 
 const Navbar = () => {
   const [showLinks, setShowLinks] = useState(false);
   const linksContainerRef = useRef(null);
   const linksRef = useRef(null);
 
-  const toggleLinks = ()=> {
-    setShowLinks(!showLinks)};
+  const toggleLinks = () => {
+    setShowLinks(!showLinks);
+  };
 
-    const linkStyles = {
-      height:showLinks?`${linksRef.current.getBoundingClientRect().height}px`:"0px",
-    
+  const linkStyles = {
+    height: showLinks
+      ? `${linksRef.current.getBoundingClientRect().height}px`
+      : "0px",
   };
 
   return (
@@ -27,8 +29,10 @@ const Navbar = () => {
         </div>
 
         <div
-          className="links-container" ref={linksContainerRef}
-        style={{linkStyles}}>
+          className="links-container"
+          ref={linksContainerRef}
+          style={{ linkStyles }}
+        >
           <ul className="links" ref={linksRef}>
             {links.map((link) => {
               const { id, url, text } = link;
@@ -43,6 +47,6 @@ const Navbar = () => {
       </div>
     </nav>
   );
-}
+};
 
-export default Navbar
+export default Navbar;
