@@ -1,4 +1,8 @@
 import React from 'react'
+  console.log(openSidebar);
+  console.log(openSidebar);
+  console.log(openSidebar);
+
 
 const Modal = () => {
   return (
