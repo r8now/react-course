@@ -6,7 +6,7 @@ import { FaTimes } from "react-icons/fa";
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
   return (
-    <aside className="sidebar">
+    <aside className={isSidebarOpen ? "sidebar show-sidebar":"sidebar"}>
       <div className="sidebar-header">
         <img src={logo} alt="coding addict" className="logo" />
         <button className="close-btn" onClick={closeSidebar}>
@@ -30,14 +30,11 @@ const Sidebar = () => {
 
       <ul className="social-links">
         {social.map((link) => {
-          const { id, url,  icon } = link;
+          const { id, url, icon } = link;
 
           return (
             <li key={id}>
-              <a href={url}>
-                {icon}
-              
-              </a>
+              <a href={url}>{icon}</a>
             </li>
           );
         })}
