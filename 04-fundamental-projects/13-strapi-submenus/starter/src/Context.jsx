@@ -11,9 +11,12 @@ const closeSidebar = () => {
   setIsSidebarOpen(false);
 };
 return (
-  <AppContext.Provider value={{ isSidebarOpen, closeSidebar }}>
+  <AppContext.Provider value={{ isSidebarOpen, openSidebar,closeSidebar }}>
     {children}
   </AppContext.Provider>
 );
 };
 
+export default useGlobalContext=> {
+  return useContext(AppContext);
+}
