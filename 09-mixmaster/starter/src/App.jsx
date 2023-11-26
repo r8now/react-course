@@ -1,16 +1,17 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
+import {About, HomeLayout, Error, Landing, Newsletter,Cocktail } from "./pages";
+
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <h2>Home</h2>,
+    element: <HomeLayout/>,
   },
   {
     path: "/about",
     element: (
-      <div>
-        <h2>about</h2>
-      </div>
+      <About />
+    
     ),
   },
 ]);
