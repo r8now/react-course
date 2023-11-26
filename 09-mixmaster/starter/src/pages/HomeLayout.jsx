@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
 
 const HomeLayout = () => {
   return (
     <div>
       <h1> HomeLayout</h1>
-      <Link to="/about"> About </Link>
+    <Outlet/>
+    <h1>hii</h1>
     </div>
   );
 }
