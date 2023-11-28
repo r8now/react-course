@@ -1,12 +1,14 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import Wrapper from "../assets/wrappers/AboutPage";
+
 
 const About = () => {
   return (
-    <div>
-      <h1>About</h1>
-      <Link to="/"> Home </Link>
-    </div>
+    <Wrapper>
+      <h3>AboutUs</h3>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dolorem soluta distinctio temporibus. Aliquam sequi accusantium molestiae quos, nulla id repudiandae animi nemo. Doloremque, sunt eius impedit eos neque maiores.</p>
+      {/* <Link to="/"> Home </Link> */}
+    </Wrapper>
   );
 }
 
